@@ -1,7 +1,7 @@
-package com.niusounds.flutter_pd
+package com.andresbrocco.flutter_pd
 
 import androidx.annotation.NonNull
-import com.niusounds.flutter_pd.impl.PdImpl
+import com.andresbrocco.flutter_pd.impl.PdImpl
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding

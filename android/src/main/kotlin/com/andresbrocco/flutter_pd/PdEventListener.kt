@@ -1,4 +1,4 @@
-package com.niusounds.flutter_pd
+package com.andresbrocco.flutter_pd
 
 import org.puredata.core.PdListener
 import java.lang.ref.WeakReference

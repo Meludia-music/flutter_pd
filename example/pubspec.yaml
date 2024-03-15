@@ -3,20 +3,20 @@ description: Demonstrates how to use the flutter_pd plugin.
 publish_to: 'none'
 
 environment:
-  sdk: '>=2.1.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.6
+
+  flutter_pd:
+    path: ../
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  flutter_pd:
-    path: ../
 
 flutter:
   uses-material-design: true

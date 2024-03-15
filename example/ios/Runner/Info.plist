@@ -45,5 +45,7 @@
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This app needs to use microphone for sound input.</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 </dict>
 </plist>

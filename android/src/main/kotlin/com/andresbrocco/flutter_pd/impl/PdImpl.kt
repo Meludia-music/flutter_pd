@@ -1,12 +1,12 @@
-package com.niusounds.flutter_pd.impl
+package com.andresbrocco.flutter_pd.impl
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
-import com.niusounds.flutter_pd.Pd
-import com.niusounds.flutter_pd.exception.PdException
+import com.andresbrocco.flutter_pd.Pd
+import com.andresbrocco.flutter_pd.exception.PdException
 import org.puredata.android.service.PdService
 import org.puredata.android.utils.PdUiDispatcher
 import org.puredata.core.PdBase

@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_pd/flutter_pd_method_channel.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   MethodChannelFlutterPd platform = MethodChannelFlutterPd();

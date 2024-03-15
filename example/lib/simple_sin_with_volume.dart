@@ -8,7 +8,7 @@ class SimpleSinWithVolume extends StatefulWidget {
 
 class _SimpleSinWithVolumeState extends State<SimpleSinWithVolume> {
   final _pd = FlutterPd.instance;
-  PdFileHandle _pdFileHandle;
+  late PdFileHandle _pdFileHandle;
 
   final _assetPath = 'assets/simple_sin_with_volume.pd';
   double _volume = 0.0;
@@ -21,7 +21,7 @@ class _SimpleSinWithVolumeState extends State<SimpleSinWithVolume> {
 
   @override
   void dispose() {
-    _pdFileHandle?.close();
+    _pdFileHandle.close();
     _pd.stopPd();
     super.dispose();
   }

@@ -1,6 +1,6 @@
-package com.niusounds.flutter_pd
+package com.andresbrocco.flutter_pd
 
-import com.niusounds.flutter_pd.exception.PdException
+import com.andresbrocco.flutter_pd.exception.PdException
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel

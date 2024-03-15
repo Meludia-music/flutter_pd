@@ -1,4 +1,4 @@
-package com.niusounds.flutter_pd
+package com.andresbrocco.flutter_pd
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.PluginRegistry

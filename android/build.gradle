@@ -1,4 +1,4 @@
-group 'com.niusounds.flutter_pd'
+group 'com.andresbrocco.flutter_pd'
 version '1.0-SNAPSHOT'
 
 buildscript {

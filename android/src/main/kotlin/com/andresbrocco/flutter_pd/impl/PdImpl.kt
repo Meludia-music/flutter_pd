@@ -60,7 +60,7 @@ class PdImpl(private val context: Context) : Pd {
 
   override fun initAudio(requireInput: Boolean) {
     if (requireInput) {
-      pdService?.initAudio(-1, -1, -1, -1f)
+      pdService?.initAudio(44100, -1, -1, -1f)
     } else {
       pdService?.initAudio(-1, 0, -1, -1f)
     }
@@ -82,10 +82,21 @@ class PdImpl(private val context: Context) : Pd {
     return PdBase.openPatch(file)
   }
 
-  override fun send(receiver: String, value: Float) {
-    val error = PdBase.sendFloat(receiver, value)
-    if (error != 0) {
-      throw PdException("send failed", "with error code $error")
+  override fun send(receiver: String, value: Any) {
+    when (value) {
+      is Float -> {
+        val error = PdBase.sendFloat(receiver, value)
+        if (error != 0) {
+          throw PdException("send failed", "with error code $error")
+        }
+      }
+      is String -> {
+        val error = PdBase.sendList(receiver, value)
+        if (error != 0) {
+          throw PdException("send failed", "with error code $error")
+        }
+      }
+      else -> throw IllegalArgumentException("Unsupported value type")
     }
   }
 

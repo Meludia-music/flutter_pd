@@ -62,7 +62,7 @@ class PdImpl(private val context: Context) : Pd {
     if (requireInput) {
       pdService?.initAudio(44100, -1, -1, -1f)
     } else {
-      pdService?.initAudio(-1, 0, -1, -1f)
+      pdService?.initAudio(44100, 0, -1, -1f)
     }
   }
 

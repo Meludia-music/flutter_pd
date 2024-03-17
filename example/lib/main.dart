@@ -4,6 +4,7 @@ import 'home_page.dart';
 import 'microphone_meter.dart';
 import 'simple_sin.dart';
 import 'simple_sin_with_volume.dart';
+import 'soundfile_player.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         '/simple_sin': (_) => SimpleSin(),
         '/simple_sin_with_volume': (_) => SimpleSinWithVolume(),
         '/microphone_meter': (_) => MicrophoneMeter(),
+        '/soundfile_player': (_) => SoundfilePlayer(),
       },
     );
   }

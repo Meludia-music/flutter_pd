@@ -29,6 +29,11 @@ class _HomePageState extends State<HomePage> {
             title: Text('Microphone meter'),
             subtitle: Text('Demonstrates how to receive value from Pd.'),
           ),
+          ListTile(
+            onTap: _open('/soundfile_player'),
+            title: Text('Soundfile Player'),
+            subtitle: Text('Opens a file and control playback: play/stop.'),
+          ),
         ],
       ),
     );

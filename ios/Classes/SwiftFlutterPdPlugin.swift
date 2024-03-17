@@ -86,13 +86,18 @@ public class SwiftFlutterPdPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
     case "send":
       guard let args = call.arguments as? [String: Any?],
         let receiver = args["receiver"] as? String,
-        let value = args["value"] as? Double
+        let value = args["value"]
       else {
         result(nil)
         return
       }
 
-      PdBase.send(Float(value), toReceiver: receiver)
+      if let doubleValue = value as? Double {
+        PdBase.send(Float(doubleValue), toReceiver: receiver)
+      } else if let stringValue = value as? String {
+        PdBase.sendSymbol(stringValue, toReceiver: receiver)
+      }
+
       result(nil)
     default:
       result(FlutterMethodNotImplemented)

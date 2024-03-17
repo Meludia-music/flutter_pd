@@ -40,7 +40,7 @@ class FlutterPd {
     return FlutterPdPlatform.instance.startAudio(requireInput: requireInput);
   }
 
-  Future<void> send(String receiverName, double value) {
+  Future<void> send(String receiverName, dynamic value) {
     return FlutterPdPlatform.instance.send(receiverName, value);
   }
 

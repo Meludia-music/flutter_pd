@@ -51,10 +51,16 @@ class DartCallHandler(delegate: DartToNative) : MethodChannel.MethodCallHandler,
         "send" -> {
           val receiver = call.argument<String>("receiver")
               ?: throw PdException("argument is missing", "receiver is required")
-          val value = call.argument<Double>("value")
+          val value = call.argument<Any>("value")
               ?: throw PdException("argument is missing", "value is required")
 
-          send(receiver, value.toFloat())
+          val castedValue = when (value) {
+            is Double -> value.toFloat()
+            is String -> value
+            else -> throw PdException("invalid argument type", "value must be Double or String")
+          }
+
+          send(receiver, castedValue)
           result.success(null)
         }
 

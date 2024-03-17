@@ -79,7 +79,7 @@ class FlutterPd(private val context: Context,
     }
   }
 
-  override fun send(receiver: String, value: Float) {
+  override fun send(receiver: String, value: Any) {
     if (pd.isRunning.not()) {
       throw PdException("PdService is not started", "call start() first.")
     }

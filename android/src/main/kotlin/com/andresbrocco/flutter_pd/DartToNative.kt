@@ -18,7 +18,7 @@ interface DartToNative {
 
   fun startAudio(requireInput: Boolean)
 
-  fun send(receiver: String, value: Float)
+  fun send(receiver: String, value: Any)
 
   fun onListen(symbol: String, id: Int, callback: (Any) -> Unit)
 

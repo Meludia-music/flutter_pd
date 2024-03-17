@@ -55,7 +55,7 @@ abstract class FlutterPdPlatform extends PlatformInterface {
     throw UnimplementedError('startAudio() not implemented');
   }
 
-  Future<void> send(String receiverName, double value) {
+  Future<void> send(String receiverName, dynamic value) {
     throw UnimplementedError('flutter_Pd::send() not implemented');
   }
 

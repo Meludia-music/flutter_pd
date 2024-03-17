@@ -71,7 +71,7 @@ class MethodChannelFlutterPd extends FlutterPdPlatform {
   }
 
   @override
-  Future<void> send(String receiverName, double value) {
+  Future<void> send(String receiverName, dynamic value) {
     return methodChannel.invokeMethod('send', {
       'receiver': receiverName,
       'value': value,

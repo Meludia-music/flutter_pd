@@ -50,9 +50,9 @@ interface Pd {
   fun openPatch(file: File): Int
 
   /**
-   * Send a value to libpd.
+   * Send a value (number or string) to libpd.
    */
-  fun send(receiver: String, value: Float)
+  fun send(receiver: String, value: Any)
 
   fun addListener(symbol: String, listener: PdListener)
 

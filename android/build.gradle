@@ -1,4 +1,4 @@
-group 'com.andresbrocco.flutter_pd'
+group 'com.meludia.FlutterPDTest'
 version '1.0-SNAPSHOT'
 
 buildscript {

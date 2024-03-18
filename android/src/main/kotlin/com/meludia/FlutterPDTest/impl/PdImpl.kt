@@ -1,12 +1,12 @@
-package com.andresbrocco.flutter_pd.impl
+package com.meludia.FlutterPDTest.impl
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
-import com.andresbrocco.flutter_pd.Pd
-import com.andresbrocco.flutter_pd.exception.PdException
+import com.meludia.FlutterPDTest.Pd
+import com.meludia.FlutterPDTest.exception.PdException
 import org.puredata.android.service.PdService
 import org.puredata.android.utils.PdUiDispatcher
 import org.puredata.core.PdBase

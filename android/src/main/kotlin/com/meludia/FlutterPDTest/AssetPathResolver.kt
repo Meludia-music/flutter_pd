@@ -1,4 +1,4 @@
-package com.andresbrocco.flutter_pd
+package com.meludia.FlutterPDTest
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.PluginRegistry

@@ -1,4 +1,4 @@
-package com.andresbrocco.flutter_pd_example
+package com.meludia.FlutterPDTest_example
 
 import io.flutter.embedding.android.FlutterActivity
 

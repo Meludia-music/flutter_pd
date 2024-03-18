@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.andresbrocco.flutter_pd">
+  package="com.meludia.FlutterPDTest">
 
   <application>
     <service android:name="org.puredata.android.service.PdService" />

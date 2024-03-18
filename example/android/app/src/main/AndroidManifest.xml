@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.andresbrocco.flutter_pd_example">
+    package="com.meludia.FlutterPDTest_example">
    <application
         android:label="flutter_pd_example"
         android:name="${applicationName}"

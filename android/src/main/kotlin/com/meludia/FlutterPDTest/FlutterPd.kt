@@ -1,8 +1,8 @@
-package com.andresbrocco.flutter_pd
+package com.meludia.FlutterPDTest
 
 import android.content.Context
-import com.andresbrocco.flutter_pd.exception.PdException
-import com.andresbrocco.flutter_pd.util.RequestPermissionHandler
+import com.meludia.FlutterPDTest.exception.PdException
+import com.meludia.FlutterPDTest.util.RequestPermissionHandler
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import java.io.File
 import java.io.IOException

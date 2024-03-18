@@ -1,7 +1,7 @@
-package com.andresbrocco.flutter_pd
+package com.meludia.FlutterPDTest
 
 import androidx.annotation.NonNull
-import com.andresbrocco.flutter_pd.impl.PdImpl
+import com.meludia.FlutterPDTest.impl.PdImpl
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding

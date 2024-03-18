@@ -1,4 +1,4 @@
-package com.andresbrocco.flutter_pd.util
+package com.meludia.FlutterPDTest.util
 
 import android.Manifest
 import android.app.Activity

@@ -1,7 +1,7 @@
 name: flutter_pd
 description: A new flutter plugin project.
 version: 0.0.1
-homepage: https://github.com/andresbrocco/flutter_pd
+homepage: https://github.com/Meludia-music/flutter_pd
 
 environment:
   sdk: '>=2.17.6 <3.0.0'
@@ -30,7 +30,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.andresbrocco.flutter_pd
+        package: com.meludia.FlutterPDTest
         pluginClass: FlutterPdPlugin
       ios:
         pluginClass: FlutterPdPlugin

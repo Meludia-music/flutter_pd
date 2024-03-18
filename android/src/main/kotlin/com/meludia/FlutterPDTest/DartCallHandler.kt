@@ -1,6 +1,6 @@
-package com.andresbrocco.flutter_pd
+package com.meludia.FlutterPDTest
 
-import com.andresbrocco.flutter_pd.exception.PdException
+import com.meludia.FlutterPDTest.exception.PdException
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel

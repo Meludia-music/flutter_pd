@@ -23,8 +23,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/microphone_level.pd
-    - assets/simple_sin.pd
-    - assets/simple_sin_with_volume.pd
-    - assets/soundfile_player.pd
-    - assets/falling.wav
+    - assets/pd-patches/main/microphone_level.pd
+    - assets/pd-patches/main/simple_sin.pd
+    - assets/pd-patches/main/simple_sin_with_volume.pd
+    - assets/pd-patches/main/soundfile_player.pd
+    - assets/audio/falling.wav

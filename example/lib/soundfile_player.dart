@@ -14,7 +14,7 @@ class _SoundfilePlayerState extends State<SoundfilePlayer> {
   final _pd = FlutterPd.instance;
   late PdFileHandle _pdFileHandle;
 
-  final _assetPath = 'assets/soundfile_player.pd';
+  final _assetPath = 'assets/pd-patches/main/soundfile_player.pd';
   bool _isPlaying = false;
 
   @override
@@ -45,22 +45,27 @@ class _SoundfilePlayerState extends State<SoundfilePlayer> {
       requireInput: false,
     );
 
-    // Copy the soundfile "falling.wav" to the app's local storage.
+    // Copy the soundfile "audio/falling.wav" to the app's local storage.
     // This is necessary because the [openfile] message in the Pure Data patch
     // expects a file path, and the file path must be accessible to the Pure Data engine.
     // ToDo
-    final byteData = await rootBundle.load('assets/falling.wav');
+    final byteData = await rootBundle.load('assets/audio/falling.wav');
     final List<int> bytes = byteData.buffer.asUint8List(byteData.offsetInBytes, byteData.lengthInBytes);
     
     final Directory dir = await getApplicationDocumentsDirectory();
-    final File file = File('${dir.path}/falling.wav');
+    // create the directory if it does not exist
+    final Directory audioDir = Directory('${dir.path}/audio');
+    if (!audioDir.existsSync()) {
+      audioDir.createSync();
+    }
+    final File file = File('${dir.path}/audio/falling.wav');
     
     await file.writeAsBytes(bytes);
     print('File copied to ${file.path}');
 
-    // load the audio file called "falling.wav", by sending a message to the [openfile] receiver.
-    // await _pd.send('openfile', 'falling.wav');
-    await _pd.send('openfile', '${dir.path}/falling.wav');
+    // load the audio file called "audio/falling.wav", by sending a message to the [openfile] receiver.
+    // await _pd.send('openfile', 'audio/falling.wav');
+    await _pd.send('openfile', '${dir.path}/audio/falling.wav');
 
     return true;
   }

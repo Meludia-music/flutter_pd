@@ -10,7 +10,7 @@ class _SimpleSinState extends State<SimpleSin> {
   final _pd = FlutterPd.instance;
   late PdFileHandle _pdFileHandle;
 
-  final _assetPath = 'assets/simple_sin.pd';
+  final _assetPath = 'assets/pd-patches/main/simple_sin.pd';
 
   @override
   void initState() {

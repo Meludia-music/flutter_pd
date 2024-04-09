@@ -10,7 +10,7 @@ class _SimpleSinWithVolumeState extends State<SimpleSinWithVolume> {
   final _pd = FlutterPd.instance;
   late PdFileHandle _pdFileHandle;
 
-  final _assetPath = 'assets/simple_sin_with_volume.pd';
+  final _assetPath = 'assets/pd-patches/main/simple_sin_with_volume.pd';
   double _volume = 0.0;
 
   @override

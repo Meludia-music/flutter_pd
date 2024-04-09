@@ -12,7 +12,7 @@ class _MicrophoneMeterState extends State<MicrophoneMeter> {
   final _pd = FlutterPd.instance;
   late PdFileHandle _pdFileHandle;
 
-  final _assetPath = 'assets/microphone_level.pd';
+  final _assetPath = 'assets/pd-patches/main/microphone_level.pd';
 
   late Stream<FloatEvent> _pdEvent;
 

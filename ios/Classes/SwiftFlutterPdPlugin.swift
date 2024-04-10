@@ -39,12 +39,12 @@ public class SwiftFlutterPdPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
     case "stopPd":
       audioController = nil
       result(nil)
-    case "openPatch": // In iOS, is it necessary to copy the patch to the app's cache local storage?
+    case "openPatch":
       guard let pdFileAssetPath = call.arguments as? String else {
         result(0)
         return
       }
-      let pdFileAssetPath_ = "assets/" + pdFileAssetPath
+      let pdFileAssetPath_ = "assets/" + pdFileAssetPath // In iOS, it's not necessary to copy the patch to the app's cache local storage: we can open it directly from the assets folder.
       let assetPath = registrar.lookupKey(forAsset: pdFileAssetPath_)
       guard let path = Bundle.main.path(forResource: assetPath, ofType: nil) else {
         result(0)

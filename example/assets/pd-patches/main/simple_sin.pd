@@ -2,8 +2,3 @@
 #X declare -path ../lib/;
 #X obj 159 127 simple_sin_abstraction;
 #X obj 159 63 declare -path ../lib/;
-#X obj 399 187 loadbang;
-#X msg 399 211 \; pd dsp 1;
-#X obj 211 229 print hello world;
-#X connect 2 0 3 0;
-#X connect 2 0 4 0;

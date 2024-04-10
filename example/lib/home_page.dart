@@ -34,6 +34,11 @@ class _HomePageState extends State<HomePage> {
             title: Text('Soundfile Player'),
             subtitle: Text('Opens a file and control playback: play/stop.'),
           ),
+          ListTile(
+            onTap: _open('/spatialization'),
+            title: Text('Spatialization'),
+            subtitle: Text('Spatialization demo.'),
+          ),
         ],
       ),
     );

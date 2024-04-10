@@ -27,3 +27,7 @@ flutter:
   assets:
     - assets/audio/
     - assets/pd-patches.zip
+    - assets/pd-patches/
+    - assets/pd-patches/main/
+    - assets/pd-patches/lib/
+    - assets/pd-patches/lib/binauralModeled-pd/

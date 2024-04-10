@@ -8,6 +8,7 @@ import 'microphone_meter.dart';
 import 'simple_sin.dart';
 import 'simple_sin_with_volume.dart';
 import 'soundfile_player.dart';
+import 'spatialization.dart';
 
 import 'package:path_provider/path_provider.dart';
 
@@ -45,7 +46,10 @@ class MyApp extends StatelessWidget {
       }
     }
 
-    copyPdPatches();
+    // Call the function "copyPdPatches()" if we are running on Android.
+    if (Platform.isAndroid) {
+      copyPdPatches();
+    }
 
     return MaterialApp(
       routes: {
@@ -54,6 +58,7 @@ class MyApp extends StatelessWidget {
         '/simple_sin_with_volume': (_) => SimpleSinWithVolume(),
         '/microphone_meter': (_) => MicrophoneMeter(),
         '/soundfile_player': (_) => SoundfilePlayer(),
+        '/spatialization': (_) => Spatialization(),
       },
     );
   }

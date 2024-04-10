@@ -8,7 +8,7 @@ class PdFileHandle {
   final MethodChannelFlutterPd _pd;
 
   /// Do not call this directory.
-  /// Use [FlutterPd.openAsset] to get [PdFileHandle].
+  /// Use [FlutterPd.openPatch] to get [PdFileHandle].
   PdFileHandle({
     required int handle,
     required MethodChannelFlutterPd pd,

@@ -14,6 +14,8 @@ dependencies:
 
   flutter_pd:
     path: ../
+  
+  flutter_archive: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -23,8 +25,5 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/pd-patches/main/microphone_level.pd
-    - assets/pd-patches/main/simple_sin.pd
-    - assets/pd-patches/main/simple_sin_with_volume.pd
-    - assets/pd-patches/main/soundfile_player.pd
-    - assets/audio/falling.wav
+    - assets/audio/
+    - assets/pd-patches.zip

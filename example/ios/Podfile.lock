@@ -1,5 +1,8 @@
 PODS:
   - Flutter (1.0.0)
+  - flutter_archive (0.0.1):
+    - Flutter
+    - ZIPFoundation (= 0.9.13)
   - flutter_pd (0.0.1):
     - Flutter
     - libpd-ios (~> 0.11)
@@ -7,19 +10,24 @@ PODS:
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
+  - ZIPFoundation (0.9.13)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - flutter_archive (from `.symlinks/plugins/flutter_archive/ios`)
   - flutter_pd (from `.symlinks/plugins/flutter_pd/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
 
 SPEC REPOS:
   trunk:
     - libpd-ios
+    - ZIPFoundation
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  flutter_archive:
+    :path: ".symlinks/plugins/flutter_archive/ios"
   flutter_pd:
     :path: ".symlinks/plugins/flutter_pd/ios"
   path_provider_foundation:
@@ -27,9 +35,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_archive: 1805fdd3a695fd284b43edb53dc35ca843fb761c
   flutter_pd: f4a60ab1df3967e2b01692866edb42c696506d00
   libpd-ios: cb16ca46e779df2a3479d281e5e4726735e451ca
   path_provider_foundation: 3784922295ac71e43754bd15e0653ccfd36a147c
+  ZIPFoundation: ae5b4b813d216d3bf0a148773267fff14bd51d37
 
 PODFILE CHECKSUM: 4e8f8b2be68aeea4c0d5beb6ff1e79fface1d048
 

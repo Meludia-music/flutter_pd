@@ -12,7 +12,7 @@ class _MicrophoneMeterState extends State<MicrophoneMeter> {
   final _pd = FlutterPd.instance;
   late PdFileHandle _pdFileHandle;
 
-  final _assetPath = 'assets/pd-patches/main/microphone_level.pd';
+  final _patchFilePath = 'pd-patches/main/microphone_level.pd';
 
   late Stream<FloatEvent> _pdEvent;
 
@@ -38,7 +38,7 @@ class _MicrophoneMeterState extends State<MicrophoneMeter> {
 
     await _pd.startPd();
 
-    _pdFileHandle = await _pd.openAsset(_assetPath);
+    _pdFileHandle = await _pd.openPatch(_patchFilePath);
 
     await _pd.startAudio(
       requireInput: true,
@@ -63,7 +63,7 @@ class _MicrophoneMeterState extends State<MicrophoneMeter> {
             } else if (snapshot.hasError) {
               return Text('Error: ${snapshot.error}');
             } else {
-              return Text('Preparing $_assetPath');
+              return Text('Preparing $_patchFilePath');
             }
           },
         ),

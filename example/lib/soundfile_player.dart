@@ -14,7 +14,7 @@ class _SoundfilePlayerState extends State<SoundfilePlayer> {
   final _pd = FlutterPd.instance;
   late PdFileHandle _pdFileHandle;
 
-  final _assetPath = 'assets/pd-patches/main/soundfile_player.pd';
+  final _patchFilePath = 'pd-patches/main/soundfile_player.pd';
   bool _isPlaying = false;
 
   @override
@@ -39,7 +39,7 @@ class _SoundfilePlayerState extends State<SoundfilePlayer> {
 
     await _pd.startPd();
 
-    _pdFileHandle = await _pd.openAsset(_assetPath);
+    _pdFileHandle = await _pd.openPatch(_patchFilePath);
 
     await _pd.startAudio(
       requireInput: false,

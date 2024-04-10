@@ -28,10 +28,10 @@ class DartCallHandler(delegate: DartToNative) : MethodChannel.MethodCallHandler,
           stopPd()
         }
 
-        "openAsset" -> {
-          val pdFileAssetPath = call.arguments as? String
-              ?: throw PdException("argument is missing", "openAsset() require an argument String")
-          result.success(openAsset(pdFileAssetPath))
+        "openPatch" -> {
+          val patchFilePath = call.arguments as? String
+              ?: throw PdException("argument is missing", "openPatch() require an argument String")
+          result.success(openPatch(patchFilePath))
         }
 
         "close" -> {

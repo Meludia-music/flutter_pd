@@ -42,8 +42,8 @@ abstract class FlutterPdPlatform extends PlatformInterface {
     throw UnimplementedError('checkPermission() not implemented');
   }
 
-  Future<PdFileHandle> openAsset(String pdFileAssetPath) async {
-    throw UnimplementedError('openAsset() not implemented');
+  Future<PdFileHandle> openPatch(String patchFilePath) async {
+    throw UnimplementedError('openPatch() not implemented');
   }
 
   /// Should only be called from [PdFileHandle.close]. Do not call this directly.

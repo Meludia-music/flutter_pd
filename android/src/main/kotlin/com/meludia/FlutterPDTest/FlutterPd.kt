@@ -49,16 +49,12 @@ class FlutterPd(private val context: Context,
     }
   }
 
-  override fun openAsset(assetName: String): Int {
+  override fun openPatch(patchFilePath: String): Int {
     try {
-      val patchDir = File(context.cacheDir, "flutter_pd").also { if (!it.exists()) it.mkdirs() }
-      val tmpFile = File(patchDir, "tmp.pd")
-      context.assets.open(assetPathResolver.resolve(assetName)).use {
-        it.copyTo(tmpFile.outputStream())
-      }
-      return pd.openPatch(tmpFile)
+      val patchFile = File(context.cacheDir, patchFilePath)
+      return pd.openPatch(patchFile)
     } catch (e: IOException) {
-      throw PdException("openAsset failed", e.message)
+      throw PdException("openPatch failed", e.message)
     }
   }
 

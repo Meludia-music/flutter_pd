@@ -10,7 +10,7 @@ class _SimpleSinState extends State<SimpleSin> {
   final _pd = FlutterPd.instance;
   late PdFileHandle _pdFileHandle;
 
-  final _assetPath = 'assets/pd-patches/main/simple_sin.pd';
+  final _patchFilePath = 'pd-patches/main/simple_sin.pd';
 
   @override
   void initState() {
@@ -26,15 +26,10 @@ class _SimpleSinState extends State<SimpleSin> {
   }
 
   Future<bool> _setupPd() async {
-    // this step can be skipped because simple_sin.pd does not require audio input.
-    // final hasPermission = await pd.checkPermission();
-    // if (!hasPermission) {
-    //   return false;
-    // }
-
     await _pd.startPd();
-
-    _pdFileHandle = await _pd.openAsset(_assetPath);
+    
+    // Open the patch from the app's local cache storage.
+    _pdFileHandle = await _pd.openPatch(_patchFilePath);
 
     await _pd.startAudio(
       requireInput: false,
@@ -50,7 +45,7 @@ class _SimpleSinState extends State<SimpleSin> {
         title: Text('Simple sin'),
       ),
       body: Center(
-        child: Text('Playing $_assetPath'),
+        child: Text('Playing $_patchFilePath'),
       ),
     );
   }

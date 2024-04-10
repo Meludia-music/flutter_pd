@@ -41,13 +41,13 @@ class MethodChannelFlutterPd extends FlutterPdPlatform {
   }
 
   @override
-  Future<PdFileHandle> openAsset(String pdFileAssetPath) async {
+  Future<PdFileHandle> openPatch(String patchFilePath) async {
     final handle = await methodChannel.invokeMethod<int>(
-      'openAsset',
-      pdFileAssetPath,
+      'openPatch',
+      patchFilePath,
     );
     if (handle == null) {
-      throw Exception('openAsset failed');
+      throw Exception('openPatch failed');
     }
     return PdFileHandle(
       handle: handle,

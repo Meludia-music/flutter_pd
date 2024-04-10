@@ -25,8 +25,8 @@ class FlutterPd {
     return FlutterPdPlatform.instance.stopPd();
   }
 
-  Future<PdFileHandle> openAsset(String pdFileAssetPath) async {
-    return FlutterPdPlatform.instance.openAsset(pdFileAssetPath);
+  Future<PdFileHandle> openPatch(String patchFilePath) async {
+    return FlutterPdPlatform.instance.openPatch(patchFilePath);
   }
 
   /// Should only be called from [PdFileHandle.close]. Do not call this directly.

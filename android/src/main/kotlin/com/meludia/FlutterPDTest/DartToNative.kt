@@ -12,7 +12,7 @@ interface DartToNative {
 
   fun stopPd()
 
-  fun openAsset(assetName: String): Int
+  fun openPatch(patchFilePath: String): Int
 
   fun close(patchHandle: Int)
 

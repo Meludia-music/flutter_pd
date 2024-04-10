@@ -10,7 +10,7 @@ class _SimpleSinWithVolumeState extends State<SimpleSinWithVolume> {
   final _pd = FlutterPd.instance;
   late PdFileHandle _pdFileHandle;
 
-  final _assetPath = 'assets/pd-patches/main/simple_sin_with_volume.pd';
+  final _patchFilePath = 'pd-patches/main/simple_sin_with_volume.pd';
   double _volume = 0.0;
 
   @override
@@ -35,7 +35,7 @@ class _SimpleSinWithVolumeState extends State<SimpleSinWithVolume> {
 
     await _pd.startPd();
 
-    _pdFileHandle = await _pd.openAsset(_assetPath);
+    _pdFileHandle = await _pd.openPatch(_patchFilePath);
 
     await _pd.startAudio(
       requireInput: false,

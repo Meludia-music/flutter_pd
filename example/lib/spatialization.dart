@@ -12,6 +12,7 @@ class _SpatializationState extends State<Spatialization> {
 
   final _patchFilePath = 'pd-patches/main/spatialization.pd';
   double _azimuth = 0.0;
+  double _elevation = 0.0;
 
   @override
   void initState() {
@@ -60,6 +61,15 @@ class _SpatializationState extends State<Spatialization> {
                 divisions: 360,
                 label: _azimuth.toStringAsFixed(0),
               ),
+              Text('Elevation:'),
+              Slider(
+                onChanged: _changeElevation,
+                value: _elevation,
+                min: -40,
+                max: 90,
+                divisions: 360,
+                label: _elevation.toStringAsFixed(0),
+              ),
             ],
           ),
         ),
@@ -71,6 +81,13 @@ class _SpatializationState extends State<Spatialization> {
     _pd.send('azimuth', newValue);
     setState(() {
       _azimuth = newValue;
+    });
+  }
+
+  void _changeElevation(double newValue) {
+    _pd.send('elevation', newValue);
+    setState(() {
+      _elevation = newValue;
     });
   }
 }
